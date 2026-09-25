@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer | TaskFlow</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #182230;
+            min-height: 100vh;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #e4e8ef;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand span {
+            color: #536dfe;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        main {
+            width: min(1050px, 86%);
+            margin: auto;
+            padding: 55px 0;
+        }
+
+        .hero {
+            background: white;
+            border: 1px solid #e4e8ef;
+            border-radius: 18px;
+            padding: 38px;
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 92px;
+            height: 92px;
+            min-width: 92px;
+            border-radius: 50%;
+            background: #eef1ff;
+            color: #536dfe;
+            display: grid;
+            place-items: center;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .eyebrow {
+            color: #536dfe;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        .grid {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e4e8ef;
+            border-radius: 14px;
+            padding: 26px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .skill {
+            background: #f1f3f8;
+            border: 1px solid #e3e7ef;
+            padding: 8px 11px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #344054;
+        }
+
+        .project-box {
+            grid-column: 1 / -1;
+        }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .meta {
+            background: #f8f9fc;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .meta strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .meta span {
+            color: #667085;
+            font-size: 13px;
+        }
+
+        .links {
+            margin-top: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 11px 15px;
+            border-radius: 9px;
+            background: #536dfe;
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        footer {
+            width: min(1050px, 86%);
+            margin: auto;
+            padding-bottom: 30px;
+            color: #8a93a3;
+            font-size: 13px;
+        }
+
+        @media (max-width: 720px) {
+            nav {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-box {
+                grid-column: auto;
+            }
+
+            .project-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="brand">
+            Task<span>Flow</span>
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tasks.html">All Tasks</a>
+            <a href="/developer.html">Developer</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="avatar">
+                NJ
+            </div>
+
+            <div>
+
+                <div class="eyebrow">
+                    Developer
+                </div>
+
+                <h1>
+                    Nikhil Juluri
+                </h1>
+
+                <p class="intro">
+                    I'm a student interested in backend development and
+                    building projects to improve my programming skills
+                    through practical work.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="grid">
+
+
+            <div class="card">
+
+                <h2>
+                    About Me
+                </h2>
+
+                <p>
+                    I'm currently learning backend development and enjoy
+                    building projects that help me understand how applications
+                    work from the backend side. I also practice DSA and am
+                    currently working through linked lists.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Skills & Learning
+                </h2>
+
+                <div class="skills">
+
+                    <span class="skill">HTML</span>
+
+                    <span class="skill">CSS</span>
+
+                    <span class="skill">JavaScript</span>
+
+                    <span class="skill">Node.js</span>
+
+                    <span class="skill">Express</span>
+
+                    <span class="skill">DSA</span>
+
+                    <span class="skill">Linked Lists</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="card project-box">
+
+                <h2>
+                    About TaskFlow
+                </h2>
+
+                <p>
+                    TaskFlow is a task-management project built as an Express
+                    practice project. The idea is to help organize tasks,
+                    plan what needs to be done, and keep track of progress
+                    in a simple way. More importantly, this project is being
+                    built to practice backend development and understand
+                    Express through actual implementation.
+                </p>
+
+
+                <div class="project-meta">
+
+                    <div class="meta">
+                        <strong>Backend</strong>
+                        <span>Node.js + Express</span>
+                    </div>
+
+                    <div class="meta">
+                        <strong>Frontend</strong>
+                        <span>HTML + CSS + JavaScript</span>
+                    </div>
+
+                    <div class="meta">
+                        <strong>Storage</strong>
+                        <span>In-memory Array</span>
+                    </div>
+
+                </div>
+
+
+                <div class="links">
+
+                    <a
+                        class="button"
+                        href="https://www.linkedin.com/in/nikhil-juluri-802a79339"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn Profile
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        TaskFlow · Built by Nikhil Juluri
+    </footer>
+
+</body>
+</html>
