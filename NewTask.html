@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task | TaskFlow</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #182230;
+            min-height: 100vh;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #e4e8ef;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand span {
+            color: #536dfe;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        main {
+            width: min(650px, 86%);
+            margin: auto;
+            padding: 55px 0;
+        }
+
+        .heading {
+            margin-bottom: 25px;
+        }
+
+        .eyebrow {
+            color: #536dfe;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        .form-card {
+            background: white;
+            border: 1px solid #e4e8ef;
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 13px;
+            border: 1px solid #d9dee8;
+            border-radius: 9px;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #536dfe;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .button {
+            width: 100%;
+            border: none;
+            padding: 13px;
+            border-radius: 9px;
+            background: #536dfe;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            opacity: 0.92;
+        }
+
+        footer {
+            width: min(650px, 86%);
+            margin: auto;
+            padding-bottom: 30px;
+            color: #8a93a3;
+            font-size: 13px;
+        }
+
+        @media (max-width: 720px) {
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="brand">
+            Task<span>Flow</span>
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tasks.html">All Tasks</a>
+            <a href="/add-task.html">Add Task</a>
+            <a href="/developer.html">Developer</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="heading">
+
+            <div class="eyebrow">
+                Task Manager
+            </div>
+
+            <h1>
+                Add a New Task
+            </h1>
+
+            <p>
+                Create a task and keep your work organized.
+            </p>
+
+        </section>
+
+
+        <!-- Sends form data to POST /tasks -->
+        <form
+            class="form-card"
+            action="/tasks"
+            method="POST"
+        >
+
+            <div class="field">
+
+                <label for="title">
+                    Task Title
+                </label>
+
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="e.g. Learn Express"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Describe what needs to be done..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="priority">
+                    Priority
+                </label>
+
+                <select
+                    id="priority"
+                    name="priority"
+                >
+
+                    <option value="low">
+                        Low
+                    </option>
+
+                    <option value="medium" selected>
+                        Medium
+                    </option>
+
+                    <option value="high">
+                        High
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="dueDate">
+                    Due Date
+                </label>
+
+                <input
+                    type="date"
+                    id="dueDate"
+                    name="dueDate"
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="button"
+            >
+                Add Task
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <footer>
+        TaskFlow · Built by Nikhil Juluri
+    </footer>
+
+</body>
+</html>
